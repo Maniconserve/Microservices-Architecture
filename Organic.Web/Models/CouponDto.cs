@@ -1,4 +1,4 @@
-﻿namespace Organic.Services.CouponAPI.Models
+﻿namespace Organic.Web.Models
 {
 	public class CouponDto
 	{
