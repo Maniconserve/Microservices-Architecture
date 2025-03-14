@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Organic.Web.Models;
 using Organic.Web.Service.Iservice;
+using Organic.Web.Utility;
 
 namespace Organic.Web.Controllers
 {
+	[Authorize]
 	public class CouponController : Controller
 	{
 		private ICouponService _couponService;
@@ -25,6 +28,7 @@ namespace Organic.Web.Controllers
 			}
 			return View(list);
 		}
+		[Authorize(Roles = SD.RoleAdmin)]
 		public IActionResult CouponCreate()
 		{
 			return View();
@@ -48,6 +52,7 @@ namespace Organic.Web.Controllers
 			}
 			return View(model);
 		}
+		[Authorize(Roles = SD.RoleAdmin)]
 		public async Task<IActionResult> CouponDelete(int couponId)
 		{
 			ResponseDto? response = await _couponService.GetCouponByIdAsync(couponId);

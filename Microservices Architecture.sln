@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organic.Web", "Organic.Web\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organic.Services.AuthAPI", "Organic.Services.AuthAPI\Organic.Services.AuthAPI.csproj", "{9513DB26-526E-421E-BBA3-72494CBE6635}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organic.Services.ProductAPI", "Organic.Services.ProductAPI\Organic.Services.ProductAPI.csproj", "{6D44CC36-9695-4C73-9C96-44121F5B7A41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{9513DB26-526E-421E-BBA3-72494CBE6635}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9513DB26-526E-421E-BBA3-72494CBE6635}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9513DB26-526E-421E-BBA3-72494CBE6635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D44CC36-9695-4C73-9C96-44121F5B7A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D44CC36-9695-4C73-9C96-44121F5B7A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D44CC36-9695-4C73-9C96-44121F5B7A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D44CC36-9695-4C73-9C96-44121F5B7A41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,5 +49,6 @@ Global
 		{998F7505-1A5C-4E27-9F50-C933F5AF0E25} = {BE18AEFC-629F-480F-A479-B8F5715B8B58}
 		{CBE350B4-652B-4E18-9085-5CD403027EC1} = {D001113A-6532-498B-97B9-19454543AD11}
 		{9513DB26-526E-421E-BBA3-72494CBE6635} = {BE18AEFC-629F-480F-A479-B8F5715B8B58}
+		{6D44CC36-9695-4C73-9C96-44121F5B7A41} = {BE18AEFC-629F-480F-A479-B8F5715B8B58}
 	EndGlobalSection
 EndGlobal

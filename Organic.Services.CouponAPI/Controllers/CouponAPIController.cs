@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Organic.Services.CouponAPI.Data;
 using Organic.Services.CouponAPI.Models;
@@ -8,6 +9,7 @@ namespace Organic.Services.CouponAPI.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
+	[Authorize]
 	public class CouponAPIController : ControllerBase
 	{
 		private AppDbContext _appDbContext;

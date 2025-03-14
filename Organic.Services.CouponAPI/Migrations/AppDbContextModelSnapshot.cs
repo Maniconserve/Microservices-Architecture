@@ -41,7 +41,7 @@ namespace Organic.Services.CouponAPI.Migrations
 
                     b.HasKey("CouponId");
 
-                    b.ToTable("coupons");
+                    b.ToTable("coupons", (string)null);
 
                     b.HasData(
                         new

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Organic.Web.Service;
 using Organic.Web.Service.Iservice;
 using Organic.Web.Utility;
@@ -9,9 +10,20 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<ICouponService,CouponService>();
+builder.Services.AddHttpClient<IAuthService, AuthService>();
 SD.CouponApiBase = builder.Configuration["ServiceUrls:CouponAPI"];
+SD.AuthApiBase = builder.Configuration["ServiceUrls:AuthAPI"];
+builder.Services.AddScoped<ITokenProvider, TokenProvider>();
 builder.Services.AddScoped<IBaseService, BaseService>();
 builder.Services.AddScoped<ICouponService, CouponService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+	.AddCookie(options =>
+	{
+		options.ExpireTimeSpan = TimeSpan.FromHours(10);
+		options.LoginPath = "/Auth/Login";
+		options.AccessDeniedPath = "/Auth/AccessDenied";
+	});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,7 +38,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
