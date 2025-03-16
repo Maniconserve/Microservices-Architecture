@@ -2,9 +2,9 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using Organic.Services.ProductAPI;
-using Organic.Services.ProductAPI.Data;
-using Organic.Services.ProductAPI.Extensions;
+using Organic.Services.ShoppingCartAPI;
+using Organic.Services.ShoppingCartAPI.Extensions;
+using ShoppingCartAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,6 +46,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<AppDbContext>(option => {
 	option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
