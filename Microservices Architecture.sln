@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCartAPI", "Shopping
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organic.MessageBus", "Organic.MessageBus\Organic.MessageBus.csproj", "{22B5EA2F-C3E6-4E10-9B3E-5AECEC5987F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelot.Gateway", "Ocelot.Gateway\Ocelot.Gateway.csproj", "{94AA9968-C84E-4743-8216-CFD4DCA823F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{22B5EA2F-C3E6-4E10-9B3E-5AECEC5987F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22B5EA2F-C3E6-4E10-9B3E-5AECEC5987F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22B5EA2F-C3E6-4E10-9B3E-5AECEC5987F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94AA9968-C84E-4743-8216-CFD4DCA823F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94AA9968-C84E-4743-8216-CFD4DCA823F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94AA9968-C84E-4743-8216-CFD4DCA823F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94AA9968-C84E-4743-8216-CFD4DCA823F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +70,6 @@ Global
 		{6D44CC36-9695-4C73-9C96-44121F5B7A41} = {BE18AEFC-629F-480F-A479-B8F5715B8B58}
 		{F05486BB-85EB-4BBE-B250-976FCFF8148B} = {BE18AEFC-629F-480F-A479-B8F5715B8B58}
 		{22B5EA2F-C3E6-4E10-9B3E-5AECEC5987F2} = {99653FC2-667A-4B90-A053-FB4C92E2D219}
+		{94AA9968-C84E-4743-8216-CFD4DCA823F7} = {01B7B178-D079-4FE7-86CA-6992A1BB1AB6}
 	EndGlobalSection
 EndGlobal
